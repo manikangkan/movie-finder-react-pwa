@@ -23,11 +23,7 @@ const Section = ({ sectionHeader, contents }) => {
         </div>
       </header>
       {contents.Response === 'True' ? (
-        <Swiper
-          spaceBetween={10}
-          slidesPerView={6}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}>
+        <Swiper spaceBetween={10} slidesPerView={6}>
           {contents.Search.map((content) => (
             <SwiperSlide>
               <div className='rounded-md overflow-hidden'>

@@ -16,7 +16,7 @@ const Master = () => {
   }, [])
 
   return (
-    <div className='p-4 space-y-8 h-full'>
+    <div className='p-4 space-y-4'>
       <Header contents={movies} />
       <Section sectionHeader='Movies' contents={movies} />
       <Section sectionHeader='Shows' contents={shows} />

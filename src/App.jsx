@@ -8,9 +8,9 @@ import Error from './components/Error'
 const App = () => {
   return (
     <BrowserRouter>
-      <div className='h-screen bg-gray-900 overflow-hidden text-sm grid grid-cols-6'>
+      <div className='h-screen bg-gray-900 overflow-hidden text-sm flex'>
         <Sidebar />
-        <main className='col-span-5 overflow-y-auto'>
+        <main className='flex-1 overflow-y-auto'>
           <Routes>
             <Route path='/' element={<Master />} />
             <Route path='/content/:imdbID' element={<Detail />} />

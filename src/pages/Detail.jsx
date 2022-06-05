@@ -19,38 +19,43 @@ const Detail = () => {
   }, [imdbID])
 
   return (
-    <div className='p-4 flex justify-between'>
-      <div>
-        <h1 className='text-xl text-slate-100 font-semibold'>
-          {movieDetails.Title}
-        </h1>
-        <p>{movieDetails.imdbRating}</p>
-        <p>{movieDetails.imdbVotes}</p>
-        <p>{movieDetails.Runtime}</p>
-        <p>{movieDetails.Year}</p>
+    <div className='p-4'>
+      <div className='flex justify-between'>
         <div>
-          <p>Director</p>
-          <h2>{movieDetails.Director}</h2>
+          <h1 className='text-xl text-slate-100 font-semibold'>
+            {movieDetails.Title}
+          </h1>
+          <p>{movieDetails.Plot}</p>
+
+          <div className='flex'>
+            <p>{movieDetails.imdbRating}</p>
+            <p>{movieDetails.imdbVotes}</p>
+            <p>{movieDetails.Runtime}</p>
+            <p>{movieDetails.Year}</p>
+          </div>
+          <div>
+            <p>Director</p>
+            <h2>{movieDetails.Director}</h2>
+          </div>
+          <div>
+            <p>Cast</p>
+            <h2>{movieDetails.Actors}</h2>
+          </div>
+          <div>
+            <p>Genre</p>
+            <h2>{movieDetails.Genre}</h2>
+          </div>
+          <div>
+            <p>Languages</p>
+            <h2>{movieDetails.Language}</h2>
+          </div>
+          <div>
+            <p>Awards</p>
+            <h2>{movieDetails.Awards}</h2>
+          </div>
         </div>
-        <div>
-          <p>Cast</p>
-          <h2>{movieDetails.Actors}</h2>
-        </div>
-        <div>
-          <p>Genre</p>
-          <h2>{movieDetails.Genre}</h2>
-        </div>
-        <div>
-          <p>Languages</p>
-          <h2>{movieDetails.Language}</h2>
-        </div>
-        <div>
-          <p>Awards</p>
-          <h2>{movieDetails.Awards}</h2>
-        </div>
+        <img src={movieDetails.Poster} alt='poster' className='rounded-md' />
       </div>
-      <img src={movieDetails.Poster} alt='poster' className='rounded-md' />
-      <p>{movieDetails.Plot}</p>
     </div>
   )
 }
